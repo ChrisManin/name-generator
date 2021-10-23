@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="component-name">
-      <h2>Nom humain</h2>
+      <h2>Nom de pirate</h2>
     </div>
 
     <b-container class="gender-container">
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: "HumanName",
+  name: "PirateName",
 };
 </script>
 
@@ -50,6 +50,6 @@ export default {
 @import "../../assets/styles/components/search/global-search.scss";
 
 .main-container {
-  background-color: #239696;
+  background-color: #960574;
 }
 </style>

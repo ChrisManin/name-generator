@@ -1,25 +1,18 @@
 <template>
   <div class="main-container">
     <div class="component-name">
-      <h2>Nom humain</h2>
+      <h2>Nom d'alien'</h2>
     </div>
 
     <b-container class="gender-container">
       <b-row align-h="around">
-        <b-button class="gender-button" variant="light">Masculin</b-button>
-        <b-button class="gender-button" variant="light">Féminin</b-button>
+        <b-button class="gender-button" variant="light">Mâle</b-button>
+        <b-button class="gender-button" variant="light">Femelle</b-button>
       </b-row>
     </b-container>
 
     <b-container class="search-container">
       <b-row align-h="around">
-        <b-input-group class="firstname-search">
-          <template #prepend>
-            <b-button variant="light">Prénom</b-button>
-          </template>
-          <b-form-input></b-form-input>
-        </b-input-group>
-
         <b-input-group class="lastname-search">
           <template #prepend>
             <b-button variant="light">Nom</b-button>
@@ -42,7 +35,7 @@
 
 <script>
 export default {
-  name: "HumanName",
+  name: "AlienName",
 };
 </script>
 
@@ -50,6 +43,6 @@ export default {
 @import "../../assets/styles/components/search/global-search.scss";
 
 .main-container {
-  background-color: #239696;
+  background-color: #4BE3E3;
 }
 </style>
