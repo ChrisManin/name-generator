@@ -1,0 +1,45 @@
+.main-container {
+  border: 1px solid;
+  border-radius: 15px;
+  margin: 2rem 0;
+
+  .component-name {
+    border-bottom: 1px solid;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    width: 80%;
+  }
+
+  .gender-container {
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+
+    .gender-button {
+      width: 15%;
+      min-height: 3rem;
+    }
+  }
+
+  .search-container {
+    margin-bottom: 2rem;
+
+    .input-group {
+      width: 50%;
+    }
+  }
+
+  .result-container {
+    width: 70%;
+    margin-bottom: 2rem
+  }
+
+  .copy-container {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+
