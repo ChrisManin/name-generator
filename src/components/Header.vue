@@ -12,8 +12,8 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-1">
-          <b-nav-item href="#">Link 1</b-nav-item>
-          <b-nav-item href="#">Link 2</b-nav-item>
+          <b-nav-item href="/">Accueil</b-nav-item>
+          <b-nav-item href="/about">À propos</b-nav-item>
           <b-nav-item href="#" disabled>Disabled</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
