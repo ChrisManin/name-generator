@@ -17,14 +17,15 @@
       </b-row>
     </b-container>
 
+    <div class="copy-container">
+      <b-button variant="light">Générer</b-button>
+    </div>
+
     <b-container class="result-container">
       <b-row align-h="center">
         <b-form-input placeholder='Résultat'></b-form-input>
       </b-row>
     </b-container>
-    <div class="copy-container">
-      <b-button variant="light">Copier</b-button>
-    </div>
   </div>
 </template>
 

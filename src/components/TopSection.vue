@@ -5,13 +5,13 @@
         <template #header>Name generator</template>
 
         <template #lead>
-          Bienvenue sur Name generator, le générateur de noms qui dépasse l'imagination !
+          Bienvenue sur Name generator, le générateur de noms ultime !
         </template>
 
         <hr class="my-4" />
 
         <p>
-          Choisissez quel type de nom vous souhaitez trouver, cliquez et découvrez le nom gagnant !
+          Choisissez l'origine du nom souhaitée, cliquez et découvrez le nom gagnant !
         </p>
       </b-jumbotron>
     </div>
