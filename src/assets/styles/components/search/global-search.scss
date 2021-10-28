@@ -21,11 +21,13 @@
     }
   }
 
-  .search-container {
+  .origin-container {
     margin-bottom: 2rem;
 
-    .input-group {
+    .origin-select {
       width: 50%;
+      min-height: 2.7rem;
+      border-radius: 5px;
     }
   }
 
