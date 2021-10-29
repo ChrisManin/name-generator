@@ -6,8 +6,8 @@
 
     <b-container class="gender-container">
       <b-row align-h="around">
-        <b-button class="gender-button" variant="light">Masculin</b-button>
-        <b-button class="gender-button" variant="light">Féminin</b-button>
+        <b-button class="gender-button" variant="light" @click="selectMaleGender">Masculin</b-button>
+        <b-button class="gender-button" variant="light" @click="selectFemaleGender">Féminin</b-button>
       </b-row>
     </b-container>
 
@@ -48,7 +48,18 @@ export default {
         { value: 'spa', text: 'Espagne' },
         { value: 'swe', text: 'Suède' },
         { value: 'tur', text: 'Turkish' },
-      ]
+      ],
+      gender: null
+    }
+  },
+  methods: {
+    selectFemaleGender: function() {
+      this.gender = 'f'
+      console.log(this.gender)
+    },
+    selectMaleGender: function() {
+      this.gender = 'm'
+      console.log(this.gender)
     }
   }
 };
