@@ -13,18 +13,18 @@
 
     <b-container class="origin-container">
       <b-row align-h="around">
-        <b-form-select class="origin-select" v-model="selected" :options="options" @change="selectNameOrigin()"></b-form-select>
+        <b-form-select class="origin-select" v-model="selected" :options="options" @change="selectNameOrigin"></b-form-select>
       </b-row>
     </b-container>
 
     <div class="copy-container">
-      <b-button variant="light">Générer</b-button>
+      <b-button type="submit" variant="light">Générer</b-button>
     </div>
 
     <b-container class="result-container">
-      <b-row align-h="center">
-        <b-form-input placeholder='Résultat'></b-form-input>
-      </b-row>
+      <b-card class="mt-3" header="Résultat">
+        <pre class="m-0" id="name-result"></pre>
+      </b-card>
     </b-container>
   </div>
 </template>
@@ -63,7 +63,14 @@ export default {
       console.log(this.gender)
     },
     selectNameOrigin: function() {
-      console.log(this.selected);
+      this.origin = this.selected
+      console.log(this.origin);
+      this.displayGeneratedName()
+    },
+    displayGeneratedName: function() {
+      document
+        .getElementById("name-result")
+        .innerText = 'Sexe : ' + this.gender + ' Origine : ' + this.origin
     }
   }
 };
