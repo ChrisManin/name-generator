@@ -13,7 +13,7 @@
 
     <b-container class="origin-container">
       <b-row align-h="around">
-        <b-form-select class="origin-select" v-model="selected" :options="options"></b-form-select>
+        <b-form-select class="origin-select" v-model="selected" :options="options" @change="selectNameOrigin()"></b-form-select>
       </b-row>
     </b-container>
 
@@ -49,7 +49,8 @@ export default {
         { value: 'swe', text: 'Suède' },
         { value: 'tur', text: 'Turkish' },
       ],
-      gender: null
+      gender: null,
+      origin: null
     }
   },
   methods: {
@@ -60,6 +61,9 @@ export default {
     selectMaleGender: function() {
       this.gender = 'm'
       console.log(this.gender)
+    },
+    selectNameOrigin: function() {
+      console.log(this.selected);
     }
   }
 };
