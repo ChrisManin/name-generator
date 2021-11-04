@@ -18,7 +18,7 @@
     </b-container>
 
     <div class="copy-container">
-      <b-button type="submit" variant="light">Générer</b-button>
+      <b-button type="submit" variant="light" @click="generateName">Générer</b-button>
     </div>
 
     <b-container class="result-container">
@@ -40,6 +40,7 @@ export default {
         { value: 'ger', text: 'Allemagne' },
         { value: 'chi', text: 'Chine' },
         { value: 'dan', text: 'Danemark' },
+        { value: 'fre', text: 'France' },
         { value: 'eng', text: 'Grande-Bretagne' },
         { value: 'ita', text: 'Italie' },
         { value: 'jap', text: 'Japon' },
@@ -65,12 +66,26 @@ export default {
     selectNameOrigin: function() {
       this.origin = this.selected
       console.log(this.origin);
-      this.displayGeneratedName()
     },
-    displayGeneratedName: function() {
-      document
-        .getElementById("name-result")
-        .innerText = 'Sexe : ' + this.gender + ' Origine : ' + this.origin
+    generateName: function() {
+      const apiUrl = process.env.VUE_APP_API_BASE_URL
+      const apiKey = process.env.VUE_APP_API_BTN_KEY
+      const numberParam = process.env.VUE_APP_NBR_LIM
+      fetch(apiUrl + 'usage=' + this.origin + '&gender=' + this.gender + numberParam + '&key=' + apiKey)
+        .then(function(res) {
+          if (res.ok) {
+            return res.json();
+          }
+        })
+        .then(function(value) {
+          console.log(value)
+          document
+            .getElementById("name-result")
+            .innerText = value.names[0]
+        })
+        .catch(function(err) {
+          console.log('Une erreur est survenue : ' + err);
+      })
     }
   }
 };
